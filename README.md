@@ -25,6 +25,23 @@ fi
 Another plaintext line.
 ```
 
+Resulting in the following if `$USER` is set:
+
+```
+A plaintext line.
+Your username is chris.
+Another platintext line.
+```
+
+Or this if `$USER` is not set:
+
+```
+A plaintext line.
+Another plaintext line.
+```
+
+## How
+
 What actually happens here is that shelltpl builds up a shell script from
 these regions and pipes it through `/bin/sh` to produce some final output.
 
@@ -74,7 +91,7 @@ I personally just wanted a really simple way of generating static HTML content
 with some control over logic (e.g. for includes), but without having to use
 some heavy, dependency-ridden tool.
 
-This is basically all done using simple awk.
+This is all done using very simple awk.
 
 ## License
 
