@@ -80,10 +80,39 @@ other shelltpl parts to be included into your template:
 
 ```
 #!
+export TITLE="Page Title Here"
+
 $SHELLTPL inc/header.html
 #!
+
 <p>More text here...</p>
+
+#!
+$SHELLTPL inc/footer.html
+#!
 ```
+
+Where you could then conditionally use exported variables in those includes,
+too.  For example, `inc/header.html` could contain:
+
+```
+<html>
+    <head>
+#!
+if [ -n "$TITLE" ]; then
+#!
+        <title>$TITLE - My Cool Site</title>
+#!
+else
+#!
+        <title>My Cool Site</title>
+#!
+fi
+#!
+    </head>
+    <body>
+```
+
 
 ## Why?
 
