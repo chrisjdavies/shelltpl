@@ -113,6 +113,32 @@ fi
     <body>
 ```
 
+## Building
+
+Such a simple tool lends itself well to being used with `make`.
+
+For the main place I use shelltpl, I build the site with a `Makefile` similar
+to:
+
+```make
+SRCDIR   := src
+OUTDIR   := html
+SRCFILES := $(wildcard $(SRCDIR)/*.html)
+OUTFILES := $(patsubst $(SRCDIR)/%,$(OUTDIR)/%,$(SRCFILES))
+SHELLTPL := ./shelltpl.sh
+
+all: $(OUTFILES)
+
+clean:
+	-rm -rf $(OUTDIR)
+
+$(OUTDIR)/%.html: $(SRCDIR)/%.html
+	@mkdir -p $$(dirname $@)
+	@echo "[SHELLTPL] $< -> $@"
+	@$(SHELLTPL) $< > $@
+
+.PHONY: all clean
+```
 
 ## Why?
 
