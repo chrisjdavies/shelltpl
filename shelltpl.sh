@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # shelltpl - super simple shell script templating
-# ---
+#
 
 export SHELLTPL=$0
 
