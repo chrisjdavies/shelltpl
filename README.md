@@ -71,7 +71,8 @@ a good degree using `/bin/sh`.
 
 Backticks and backslashes are escaped in plaintext, but `$` are left alone;
 however, backslashes immediately before a `$` are not escaped.  This allows
-literal `$` to be inserted in plaintext regions as `\$`.
+variable and subshell interpolation in plaintext regions via `$FOO` or
+`$(some-command ...)`, while literal `$` can be inserted with a simple `\$`.
 
 ## Includes
 
