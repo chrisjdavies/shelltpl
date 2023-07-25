@@ -5,7 +5,7 @@ Super simple shell script templating.
 ## Usage
 
 ```
-$ shelltpl input_file.txt ...
+$ shelltpl.sh input_file.txt ...
 ```
 
 Input files are just alternating plaintext and `/bin/sh` code regions.
