@@ -148,6 +148,15 @@ some heavy, dependency-ridden tool.
 
 This is all done using very simple awk.
 
+## Inspiration
+
+Heavily inspired by [mkws.sh](https://mkws.sh).  It looked just like what I
+wanted, but I didn't want to download any binary blobs or have to compile
+things for such a simple task.
+
+shelltpl has fewer features: it just does one thing and does it reasonably
+well.
+
 ## License
 
 Released under the ISC license.
