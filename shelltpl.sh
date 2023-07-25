@@ -2,6 +2,11 @@
 #
 # shelltpl - super simple shell script templating
 #
+# Plaintext and code regions are delimited by lone `#!` lines.  Output is
+# produced by running the concatenated script through `/bin/sh`.
+#
+# There is no magic here.
+#
 
 export SHELLTPL=$0
 
