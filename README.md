@@ -147,7 +147,8 @@ I personally just wanted a really simple way of generating static HTML content
 with some control over logic (e.g. for includes), but without having to use
 some heavy, dependency-ridden tool.
 
-This is all done using very simple awk.
+This is all done using very simple awk and small enough to just keep in your
+repo alongside the templates if you wanted to.
 
 ## Inspiration
 
